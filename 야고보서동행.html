@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>야고보서, 읽기 전에 — 순천서남교회</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700;900&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FDF3E6;
+    --panel:#FFFFFF;
+    --panel-line:#EBDCC3;
+    --ink:#2B2A4A;
+    --ink-soft:#4E4C73;
+    --ink-faint:#8987A6;
+    --gold:#C9922B;
+    --gold-deep:#8F661C;
+    --gold-tint:#FBEAD0;
+    --indigo:#5B6FA6;
+    --indigo-deep:#39477A;
+    --indigo-tint:#E7EAF6;
+    --coral:#E8875C;
+    --coral-deep:#B85E36;
+    --coral-tint:#FBE3D3;
+    --shadow: 0 2px 4px rgba(43,42,74,0.07), 0 14px 32px -16px rgba(43,42,74,0.24);
+  }
+
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html{ color-scheme: light; }
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    line-height:1.8;
+    font-size:19px;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+  }
+  .wrap{ max-width:640px; margin:0 auto; padding:0 18px 90px; }
+
+  h1,h2,h3{ font-family:'Noto Serif KR','Batang',serif; font-weight:800; letter-spacing:-0.01em; text-wrap:balance; }
+
+  /* ---------- Hero banner ---------- */
+  header.hero{
+    margin:20px 0 28px; border-radius:22px; overflow:hidden; position:relative;
+    background:linear-gradient(150deg, var(--indigo-deep) 0%, var(--coral) 100%);
+    box-shadow:var(--shadow); padding:40px 26px 34px; text-align:center; color:#FFF8EE;
+  }
+  header.hero::after{
+    content:''; position:absolute; left:0; right:0; bottom:0; height:46%;
+    background:radial-gradient(circle at 50% 120%, rgba(255,214,158,0.55), transparent 60%);
+    pointer-events:none;
+  }
+  .eyebrow{
+    position:relative; display:inline-block; font-size:15px; font-weight:700; letter-spacing:0.03em;
+    color:#FFF3DC; background:rgba(255,255,255,0.16); border:1px solid rgba(255,255,255,0.35);
+    border-radius:999px; padding:8px 16px; margin-bottom:22px;
+  }
+  h1.title{ position:relative; font-size:42px; line-height:1.28; margin:0 0 16px; color:#FFFDF6; }
+  .subtitle{ position:relative; font-size:19px; color:#FDE9D4; max-width:26em; margin:0 auto; font-weight:500; line-height:1.7; }
+  .hero-verse{
+    position:relative; margin-top:28px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.32);
+    font-family:'Noto Serif KR',serif; font-size:18px; color:#FFF3DC; font-weight:600; line-height:1.75;
+  }
+  .hero-verse b{ color:#FFFFFF; }
+
+  /* ---------- Intro ---------- */
+  .intro{ padding:8px 4px 28px; }
+  .intro p{ font-size:19px; color:var(--ink); margin:0 0 18px; }
+  .intro p:last-child{ margin-bottom:0; }
+  .intro b{ color:var(--coral-deep); }
+
+  /* ---------- Spine sections ---------- */
+  .spine{ position:relative; margin-top:12px; }
+  .spine::before{
+    content:''; position:absolute; left:26px; top:8px; bottom:8px; width:3px;
+    background:linear-gradient(var(--gold), var(--indigo) 50%, var(--coral) 100%);
+    border-radius:3px; opacity:.55;
+  }
+  .station{ position:relative; padding:2px 0 44px 72px; }
+  .station:last-child{ padding-bottom:6px; }
+  .station-num{
+    position:absolute; left:0; top:0; width:52px; height:52px; border-radius:50%;
+    color:#FFFDF6; font-family:'Noto Serif KR',serif; font-weight:800; font-size:21px;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:var(--shadow);
+  }
+  .station:nth-child(3n+1) .station-num{ background:var(--gold); }
+  .station:nth-child(3n+2) .station-num{ background:var(--indigo); }
+  .station:nth-child(3n+3) .station-num{ background:var(--coral); }
+
+  .station h2{ font-size:25px; margin:8px 0 14px; color:var(--ink); line-height:1.4; }
+  .station p{ font-size:18.5px; color:var(--ink); margin:0 0 16px; }
+  .station p.soft{ color:var(--ink-soft); font-size:17.5px; }
+  .station p:last-child{ margin-bottom:0; }
+  .station b{ color:var(--coral-deep); }
+
+  /* ---------- table ---------- */
+  .structure-table{ width:100%; border-collapse:collapse; margin:18px 0 20px; font-size:16px; }
+  .structure-table th,.structure-table td{
+    text-align:left; padding:13px 9px; border-bottom:2px solid var(--panel-line); vertical-align:top;
+  }
+  .structure-table th{ color:var(--ink-faint); font-weight:700; font-size:13px; letter-spacing:.03em; }
+  .structure-table td:first-child{ color:var(--ink); font-weight:700; }
+  .structure-table td:nth-child(2){ color:var(--coral-deep); font-weight:700; white-space:nowrap; }
+
+  .seed-table{ width:100%; border-collapse:collapse; margin:16px 0 4px; font-size:15.5px; }
+  .seed-table th,.seed-table td{ text-align:left; padding:12px 9px; border-bottom:2px solid var(--panel-line); vertical-align:top; }
+  .seed-table th{ color:var(--ink-faint); font-weight:700; font-size:12.5px; letter-spacing:.03em; }
+  .seed-table td:nth-child(2){ white-space:nowrap; }
+  .seed-table td:nth-child(2) span{
+    display:inline-block; padding:4px 10px; border-radius:8px; font-size:13.5px; font-weight:800; color:#FFF;
+  }
+  .seed-table tr:nth-child(2) td:nth-child(2) span{ background:var(--coral); }
+  .seed-table tr:nth-child(3) td:nth-child(2) span{ background:var(--indigo); }
+  .seed-table tr:nth-child(4) td:nth-child(2) span{ background:var(--gold); }
+  .table-note{ font-size:15px; color:var(--ink-faint); margin-top:14px; line-height:1.75; border-left:3px solid var(--panel-line); padding-left:13px; }
+
+  /* ---------- two-column compare ---------- */
+  .compare{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:18px 0 6px; }
+  .compare-card{ border-radius:14px; padding:17px 16px; box-shadow:var(--shadow); }
+  .compare-card.paul{ background:var(--indigo-tint); border:1.5px solid var(--indigo); }
+  .compare-card.james{ background:var(--coral-tint); border:1.5px solid var(--coral); }
+  .compare-card .label{ font-size:14px; font-weight:800; letter-spacing:.02em; margin-bottom:9px; }
+  .compare-card.paul .label{ color:var(--indigo-deep); }
+  .compare-card.james .label{ color:var(--coral-deep); }
+  .compare-card .body{ font-size:15.5px; color:var(--ink); line-height:1.75; font-weight:500; }
+
+  /* ---------- three theme cards ---------- */
+  .theme-grid{ display:flex; flex-direction:column; gap:12px; margin:18px 0 6px; }
+  .theme-card{
+    background:var(--panel); border:2px solid var(--panel-line); border-radius:14px;
+    padding:17px 18px; box-shadow:var(--shadow);
+  }
+  .theme-card .t-title{ font-family:'Noto Serif KR',serif; font-weight:800; font-size:18.5px; margin-bottom:7px; }
+  .theme-card:nth-child(1) .t-title{ color:var(--gold-deep); }
+  .theme-card:nth-child(2) .t-title{ color:var(--indigo-deep); }
+  .theme-card:nth-child(3) .t-title{ color:var(--coral-deep); }
+  .theme-card .t-body{ font-size:16.5px; color:var(--ink-soft); line-height:1.75; }
+
+  /* ---------- key verse ---------- */
+  .key-verse{
+    background:var(--indigo-deep); border-radius:16px;
+    padding:28px 24px; margin:18px 0 6px; box-shadow:var(--shadow);
+  }
+  .key-verse blockquote{
+    margin:0 0 12px; font-family:'Noto Serif KR',serif; font-size:20px; line-height:1.72;
+    color:#FFFDF6; font-weight:700;
+  }
+  .key-verse cite{ font-style:normal; font-size:15.5px; color:#DCE2F4; font-weight:600; }
+  .key-question{
+    margin-top:18px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.25);
+    font-size:17px; color:#FFF3DC; font-weight:700; line-height:1.7;
+  }
+
+  /* ---------- Questions callout ---------- */
+  .questions{
+    margin:48px 0 40px; padding:32px 22px; border-radius:22px;
+    background:var(--indigo-tint); border:2px solid var(--indigo);
+  }
+  .questions .qtag{
+    display:inline-block; font-size:14.5px; font-weight:800; letter-spacing:.04em; color:#FFFFFF;
+    background:var(--indigo); border-radius:999px; padding:7px 15px; margin-bottom:16px;
+  }
+  .questions h2{ font-size:26px; margin:0 0 12px; color:var(--indigo-deep); line-height:1.4; }
+  .questions > p.lead{ font-size:17px; color:var(--ink-soft); margin:0 0 24px; line-height:1.75; }
+  .qlist{ display:flex; flex-direction:column; gap:16px; }
+  .qitem{
+    display:flex; gap:16px; align-items:flex-start; background:var(--panel);
+    border-radius:14px; padding:19px 18px; box-shadow:var(--shadow);
+  }
+  .qitem .qnum{
+    font-family:'Noto Serif KR',serif; font-weight:800; font-size:20px; color:#FFF;
+    background:var(--indigo); width:36px; height:36px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; flex:none;
+  }
+  .qitem .qbody h3{ font-size:20px; margin:0 0 7px; color:var(--ink); line-height:1.4; }
+  .qitem .qbody p{ font-size:16.5px; color:var(--ink-soft); margin:0; line-height:1.7; }
+
+  .also{ margin-top:26px; padding-top:22px; border-top:2px dashed var(--indigo); }
+  .also p.lead{ font-size:15.5px; color:var(--indigo-deep); font-weight:700; margin:0 0 13px; }
+  .also ol{ margin:0; padding-left:24px; }
+  .also li{ font-size:16.5px; color:var(--ink); margin-bottom:11px; line-height:1.7; }
+  .also li:last-child{ margin-bottom:0; }
+
+  /* ---------- footer ---------- */
+  footer{ text-align:center; padding-top:8px; }
+  footer .sched{ font-size:15.5px; color:var(--ink-faint); margin-bottom:26px; line-height:1.85; }
+  footer .signoff{
+    font-family:'Noto Serif KR',serif; font-size:17.5px; color:var(--ink-soft); font-weight:600;
+    border-top:2px solid var(--panel-line); padding-top:26px;
+  }
+  footer .church{ display:flex; align-items:center; justify-content:center; gap:9px; margin-top:12px; font-weight:800; color:var(--coral-deep); font-size:19.5px; letter-spacing:.01em; }
+  footer .church img{ height:26px; width:auto; display:block; }
+
+  @media (max-width:420px){
+    body{ font-size:17.5px; }
+    h1.title{ font-size:33px; }
+    .compare{ grid-template-columns:1fr; }
+    header.hero{ padding:34px 20px 28px; }
+    .station{ padding-left:60px; }
+    .station-num{ width:44px; height:44px; font-size:18px; }
+    .spine::before{ left:21px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">순천서남교회 말씀공동체 · 새벽설교 시리즈</span>
+    <h1 class="title">야고보서, 읽기 전에</h1>
+    <p class="subtitle">말로 고백한 믿음이, 오늘 삶으로 증명되고 있는가.<br>'신약의 아모스서'가 매일 새벽 던지는 질문입니다.</p>
+    <p class="hero-verse">"너희는 말씀을 <b>행하는 자</b>가 되고 듣기만 하여 자신을 속이는 자가 되지 말라"<br>— 야고보서 1:22</p>
+  </header>
+
+  <section class="intro">
+    <p>사사기가 <b>왕을 모시지 않은</b> 공동체가 어디까지 무너질 수 있는지를 보여 주었다면, 야고보서는 왕이신 하나님을 믿는다고 <b>말은 하면서도</b> 삶으로는 그 말을 입증하지 못하는 신앙을 겨눕니다. 질문의 각도는 다르지만, 묻는 것은 결국 같습니다. 하나님이 정말 내 삶의 왕이신가.</p>
+    <p>야고보서는 구약 예언자 중 정의를 가장 강하게 외쳤던 아모스에 빗대어 <b>'신약성경의 아모스서'</b>라 불립니다. 믿음이 삶의 정의와 사랑의 행함으로 열매 맺어야 한다고 거듭 강조하기 때문입니다.</p>
+  </section>
+
+  <div class="spine">
+
+    <div class="station">
+      <div class="station-num">1</div>
+      <h2>저자는 누구인가</h2>
+      <p>저자는 자신을 "하나님과 주 예수 그리스도의 <b>종</b> 야고보"라고만 밝힙니다(1:1). 예수님의 육신의 동생으로 보는 것이 가장 널리 받아들여지는 견해입니다. 공생애 중에는 예수님을 믿지 않았지만(요 7:5), 부활하신 주님을 만난 뒤 예루살렘 교회를 이끄는 지도자가 되었습니다(행 15:13~21).</p>
+      <p class="soft">예수님의 친동생이라는 신분은 당시 엄청난 권위의 근거가 될 수 있었습니다. 그런데도 그는 "예수님의 동생"이 아니라 "그리스도의 종"이라 자신을 소개합니다. 혈연의 특권 대신 가장 낮은 자리를 자처한 것입니다. 교회 역사가 유세비우스는 그가 무릎이 낙타처럼 굳을 만큼 기도했다 전하며 그를 '의인 야고보'라 불렀습니다.</p>
+    </div>
+
+    <div class="station">
+      <div class="station-num">2</div>
+      <h2>누구에게, 왜 썼는가</h2>
+      <p>"흩어져 있는 열두 지파"(1:1), 곧 팔레스타인 밖에 흩어져 살던 유대계 그리스도인들에게 보낸 회람 서신으로 보는 것이 일반적입니다. 이들 중에는 가난한 사람도, 장사로 부자가 된 사람도 있었고, 교회 안에서조차 빈부에 따라 사람을 차별하는 풍조가 자라고 있었습니다(2:1~4).</p>
+      <p>더 근본적인 문제도 있었습니다. 믿음을 머리로 동의하는 것으로 충분하다 여기며, 삶으로는 그 믿음을 실천하지 않는 사람들이 있었습니다. 야고보의 목적은 새 교리를 세우는 데 있지 않습니다. 이미 믿는 사람들에게, 그 믿음이 어떻게 성숙한 행함으로 드러나야 하는지를 가르치는 데 있습니다.</p>
+    </div>
+
+    <div class="station">
+      <div class="station-num">3</div>
+      <h2>믿음과 행함 — 바울과 다투지 않습니다</h2>
+      <p>야고보서는 역사적으로 오해를 많이 받았습니다. 루터는 한때 이 책을 <b>'지푸라기 서신'</b>이라 불렀습니다. "행함이 없는 믿음은 죽은 것"(2:17, 26)이라는 말이, 오직 믿음으로 의롭다 하심을 받는다는 바울의 가르침과 충돌하는 것처럼 보였기 때문입니다.</p>
+      <p class="soft">그러나 두 사도가 진짜로 상대하던 '행위/행함'은 서로 다른 것이었습니다.</p>
+      <div class="compare">
+        <div class="compare-card paul">
+          <div class="label">바울이 말한 '행위'</div>
+          <div class="body">할례·절기 같은, <b style="color:var(--indigo-deep)">구원받기 이전</b>의 율법적 조건(갈 2:16)</div>
+        </div>
+        <div class="compare-card james">
+          <div class="label">야고보가 말한 '행함'</div>
+          <div class="body">구원받은 자가 이웃에게 베푸는 <b style="color:var(--coral-deep)">사랑의 실천</b>(2:14~26)</div>
+        </div>
+      </div>
+      <p style="margin-top:4px;">야고보서가 진짜로 대조하는 것은 '믿음과 행함'이 아니라 '산 믿음'과 '죽은 믿음'입니다. 갈라디아서의 표현을 빌리면 "사랑으로써 역사하는 믿음"(갈 5:6)입니다. 믿음보다 행함이 아니라, <b>믿음 안에서의 행함</b>입니다. 예장통합 교단은 이 둘을 대립이 아니라, '하나님의 주권적 은혜'로 값없이 받은 칭의가 성화의 삶으로 자라가는 한 복음의 두 면으로 읽습니다.</p>
+    </div>
+
+    <div class="station">
+      <div class="station-num">4</div>
+      <h2>책의 구조 — 오늘 본문이 책 전체의 씨앗입니다</h2>
+      <p>야고보서는 짧은 교훈들이 모여 있어 전체 구조를 파악하기 쉽지 않은 책으로 알려져 있습니다. 그런데 1:19에 책 전체를 요약하는 세 주제가 나옵니다.</p>
+      <table class="structure-table">
+        <tr><th>1:19의 세 주제</th><th>본문</th><th>전개</th></tr>
+        <tr><td>성내기는 더디 하라</td><td>1:20–2:26</td><td>차별과 '산 믿음·죽은 믿음'</td></tr>
+        <tr><td>말하기는 더디 하라</td><td>3:1–4:12</td><td>혀와 지혜의 문제</td></tr>
+        <tr><td>듣기는 속히 하라</td><td>4:13–5:20</td><td>계획·인내·기도</td></tr>
+      </table>
+      <p class="soft">놀랍게도 이 세 주제는 책을 열자마자 1:2~11에 이미 압축되어 있습니다.</p>
+      <table class="seed-table">
+        <tr><th>1:2~11의 흐름</th><th>1:19의 요약</th></tr>
+        <tr><td>1:9~11 (낮아짐과 높아짐을 자랑하라)</td><td><span>성내기</span></td></tr>
+        <tr><td>1:2~4 (시험을 기쁘게 여기라)</td><td><span>말하기</span></td></tr>
+        <tr><td>1:5~8 (지혜를 구하라)</td><td><span>듣기</span></td></tr>
+      </table>
+      <p class="table-note">⚠️ 이 대응 구조는 일부 학자들이 제안하는 교차대구 읽기이며, 모든 주석가가 동일하게 받아들이는 것은 아닙니다. 다만 1:2~11이 책 전체에서 반복·확장되는 핵심 주제를 담은 '씨앗 문단'이라는 점은 널리 인정됩니다.</p>
+    </div>
+
+    <div class="station">
+      <div class="station-num">5</div>
+      <h2>핵심 주제 셋</h2>
+      <div class="theme-grid">
+        <div class="theme-card">
+          <div class="t-title">시험과 성숙</div>
+          <div class="t-body">시험(1:2~4, 12~15)은 두 가지입니다. 외부에서 오는 사회적 고난과, 내면의 욕심에서 오는 유혹. 둘 다 인내를 통해 "온전하고 구비하여 조금도 부족함이 없는" 성숙으로 이어져야 합니다.</div>
+        </div>
+        <div class="theme-card">
+          <div class="t-title">온전한 율법 = 자유의 율법</div>
+          <div class="t-body">야고보가 말하는 율법은 제의적 규정이 아니라 "네 이웃을 네 몸과 같이 사랑하라"는 사랑의 법입니다(1:25, 2:8, 2:12).</div>
+        </div>
+        <div class="theme-card">
+          <div class="t-title">부와 가난</div>
+          <div class="t-body">부 자체를 정죄하지 않지만, 부를 하나님의 뜻대로 쓰지 않는 것과 가난한 자를 차별하는 것은 강하게 경고합니다(1:9~11, 2:1~7, 5:1~6).</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="key-verse" style="margin:0 0 40px;">
+    <blockquote>"내 사랑하는 형제들아 너희가 알거니와 사람마다 듣기는 속히 하고 말하기는 더디 하며 성내기도 더디 하라"</blockquote>
+    <cite>야고보서 1:19 · 책 전체를 꿰는 한 문장</cite>
+    <p class="key-question">내가 믿는다고 말하는 그 믿음이, 오늘 내 삶에서 실제로 드러나고 있는가?</p>
+  </div>
+
+  <section class="questions">
+    <div class="qtag">매일 본문을 읽은 뒤</div>
+    <h2>말씀 앞에 던질 두 가지 질문</h2>
+    <p class="lead">야고보서의 본문 하나하나는 다르지만, 그 앞에서 우리가 던질 질문은 매일 같습니다. 읽기를 마친 뒤 잠시 멈추어 이 두 가지를 스스로에게 물어보십시오.</p>
+    <div class="qlist">
+      <div class="qitem">
+        <div class="qnum">1</div>
+        <div class="qbody">
+          <h3>하나님은 어떤 분이신가?</h3>
+          <p>오늘 본문의 낱말과 장면에서 실제로 드러나는 하나님을 붙잡으십시오. 일반적인 신관이 아니라, 그날 본문이 보여 주는 하나님입니다.</p>
+        </div>
+      </div>
+      <div class="qitem">
+        <div class="qnum">2</div>
+        <div class="qbody">
+          <h3>내가 고백하는 믿음이, 오늘 행함으로 드러나고 있는가?</h3>
+          <p>야고보서를 옛 교훈으로만 읽지 마십시오. 오늘 본문이 가리키는 그 행함이, 내 삶의 어느 구체적인 자리에 아직 닿지 않았는지를 물어보십시오.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="also">
+      <p class="lead">본문을 읽는 동안 함께 살펴도 좋은 질문 셋</p>
+      <ol>
+        <li>오늘 본문은 1:19의 세 주제 — 성내기·말하기·듣기 — 가운데 어디에 속하는가?</li>
+        <li>오늘 본문에서 '위로부터 난 것'과 '땅에서 난 것'은 무엇으로 나뉘는가?</li>
+        <li>오늘 말씀이 가리키는 구체적 행함은 무엇이며, 그것을 오늘·내일 중 언제 옮길 수 있는가?</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    <p class="sched">청장년 새벽설교문은 개역개정, 교회학교 중고등부 설교문은 표준새번역을 따라 매일 함께 나갑니다.</p>
+    <p class="signoff">말로 고백한 믿음이 삶으로 걸어 나가기를 구하며,
+      <span class="church"><img src="assets/PCK_Logo.png" alt="대한예수교장로회(통합) 교단 마크">순천서남교회 말씀공동체</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
